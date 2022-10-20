@@ -1,11 +1,12 @@
+import { BaseModel } from '../base.model'
+
 export enum ROLES {
 	ADMIN = 'admin',
 	SELLER = 'seller',
 	COSTUMER = 'costumer'
 }
 
-export type User = {
-	id: string | number
+export interface User extends BaseModel {
 	userName: string
 	role: ROLES
 }
